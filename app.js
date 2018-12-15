@@ -3,8 +3,6 @@ var app = express();
 var http = require("http");
 var server = http.createServer(app);
 var bodyParser = require('body-parser');
-var ejs = require("ejs");
-var mongoose = require('mongoose');
 
 server.listen(process.env.PORT || 8080, function(){
 	console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
