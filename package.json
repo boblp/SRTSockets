@@ -1,0 +1,17 @@
+{
+	"name": "Nombre-del-proyecto",
+	"description": "learning node js",
+	"version": "0.0.1",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"ejs": "^2.6.1",
+		"express": "^4.16.4",
+		"http": "0.0.0",
+		"mongoose": "^5.4.0",
+		"socket.io": "^2.2.0"
+	}
+}
