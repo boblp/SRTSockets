@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 io.on('connection', socket => {
-	socket.on('prueba_socketss', (var1, var2) => {
-		io.emit('respuesta_server', "holis");
+	socket.on('registro_detectado', () => {
+		console.log("SOCKET EN HEROKU");
+		io.emit('respuesta_server', "compra hecha");
 	});
 });
