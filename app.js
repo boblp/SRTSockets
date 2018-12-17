@@ -16,6 +16,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 io.on('connection', socket => {
 	socket.on('registro_detectado', () => {
 		console.log("SOCKET EN HEROKU");
-		io.emit('respuesta_server', "compra hecha");
+		io.emit('respuesta_server');
 	});
 });
