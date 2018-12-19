@@ -15,7 +15,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 io.on('connection', socket => {
 	socket.on('registro_detectado', () => {
-		console.log("SOCKET EN HEROKU");
-		io.emit('respuesta_server');
+		io.emit('respuesta_compra');
+	});
+});
+
+io.on('connection', socket => {
+	socket.on('actualizacion_detectada', () => {
+		io.emit('respuesta_actualizacion');
 	});
 });
