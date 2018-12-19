@@ -17,9 +17,6 @@ io.on('connection', socket => {
 	socket.on('registro_detectado', () => {
 		io.emit('respuesta_compra');
 	});
-});
-
-io.on('connection', socket => {
 	socket.on('actualizacion_detectada', () => {
 		io.emit('respuesta_actualizacion');
 	});
