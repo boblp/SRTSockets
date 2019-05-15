@@ -10,6 +10,7 @@ server.listen(process.env.PORT || 8080, function(){
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
+	io.emit('respuesta_server', "holis");
 	socket.on('prueba_socketss', (var1, var2) => {
 		io.emit('respuesta_server', "holis");
 	});
