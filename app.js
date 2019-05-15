@@ -12,7 +12,7 @@ const io = require('socket.io')(server);
 
 io.on('connection', socket => {
 	socket.on('send_msg_from_user', (token, section, msg) => {
-		jwt.verify(request.query.auth, 'secret', function(err, decoded) {
+		jwt.verify(token, 'secret', function(err, decoded) {
 	    	if (err){ resolve('Invalid Code') } else {
 	    		io.emit('send_msg', decoded.name, section, msg);
 	    	}
