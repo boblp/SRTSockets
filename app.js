@@ -11,10 +11,10 @@ server.listen(process.env.PORT || 8080, function(){
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
-	socket.on('send_msg_from_user', (token, section, msg) => {
+	socket.on('send_msg_from_user', (token, section, msg, profilePic) => {
 		jwt.verify(token, 'secret', function(err, decoded) {
 	    	if (err){ resolve('Invalid Code') } else {
-	    		io.emit('send_msg', decoded.name, section, msg);
+	    		io.emit('send_msg', decoded.name, section, msg, profilePic);
 	    	}
 	    });
 	});
